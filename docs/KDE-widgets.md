@@ -1,5 +1,5 @@
 # KDE Installation
-Appii
+
 ## Widgets config
 
 Panel Colorizer:
