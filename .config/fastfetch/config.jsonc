@@ -1,135 +1,105 @@
+//   _____ _____ _____ _____ _____ _____ _____ _____ _____ 
+//  |   __|  _  |   __|_   _|   __|   __|_   _|     |  |  |
+//  |   __|     |__   | | | |   __|   __| | | |   --|     |
+//  |__|  |__|__|_____| |_| |__|  |_____| |_| |_____|__|__|  HYPRLAND
+//
+//  by Bina
 {
-  //                                                                           &
-  //                                                                        &&&&&&&
-  //                                                                         &&|&&& &&
-  //                                                                          &/&| &
-  //                                                                            &|& &
-  //                                                                            /|\       &
-  //                                                                            \|         &&&&&
-  //                                                                             |/        &&&&&&&
-  //                                                                            /~|  &&/& \|& &  &
-  //                                                                              /|\ &/&&/_/
-  //                                                                              |/  \|   &
-  //                                                &     &                      /~/ / //
-  //                                                  &&&&&&                     /|/
-  //                                                    &&&__\&& &&              /~
-  //                                                   &&&&&  \_&&|     \|       \|/~
-  //                                                        &     \_\_\   \__   /|/~
-  //                                                         &    \\|       \__//~
-  //                                                               \\_      /~|
-  //                                                                         /~/~
-  //                                                          :___________./~~~\.___________:
-  //                                                           \                           /
-  //                                                            \_________________________/
-  //                                                            (_)                     (_)
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "display": {
-    "separator": "  ",
-    "color": {
-      "separator": "#04a5e5"
-    }
-  },
   "logo": {
-    "type": "builtin",
+    "source": "~/.dotfiles/Miscellaneous/Pictures/maomao_square_strans.png",
+    "type": "kitty",
+    "height": 11,
     "padding": {
-      "top": 1,
+      "top": 5,
       "left": 3
     }
   },
+  "display": {
+    "separator": " "
+  },
   "modules": [
+    "break",
+    "break",
+    "break",
+    // {
+    //   "type": "custom",
+    //   "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m"
+    // },
+    "break",
     {
-      "type": "custom",
-      "format": "{##c6a0f6}  System Information"
+      "type": "title",
+      "keyWidth": 10
     },
-    {
-      "type": "custom",
-      "format": "{##c6a0f6}══════════════════════"
-    },
-    // "break",
-    {
-      "type": "custom",
-      "format": "{##d20f39} OS"
-    },
+    "break",
     {
       "type": "os",
-      "key": "├─  Distro",
-      "keyColor": "#d20f39"
+      "key": " ",
+      "keyColor": "34" // = color4
     },
     {
       "type": "kernel",
-      "key": "├─  Kernel",
-      "keyColor": "#d20f39"
+      "key": " ",
+      "keyColor": "34"
     },
     {
-      "type": "custom",
-      "format": "{##a6d189} Desktop Environment"
-    },
-    {
-      "type": "wm",
-      "key": "├─ 󱂬 WM",
-      "keyColor": "#a6d189"
-    },
-    {
-      "type": "wmtheme",
-      "key": "├─ 󰸌 Theme",
-      "keyColor": "#a6d189"
-    },
-    {
-      "type": "custom",
-      "format": "{##f5a97f} Terminal"
+      "type": "packages",
+      "format": "{} (pacman)",
+      "key": " ",
+      "keyColor": "34"
     },
     {
       "type": "shell",
-      "key": "├─  Shell",
-      "keyColor": "#f5a97f"
+      "key": " ",
+      "keyColor": "34"
     },
     {
       "type": "terminal",
-      "key": "├─  Term",
-      "keyColor": "#f5a97f"
+      "key": " ",
+      "keyColor": "34"
     },
     {
-      "type": "custom",
-      "format": "{##8aadf4} Hardware"
+      "type": "wm",
+      "key": " ",
+      "keyColor": "34"
     },
     {
-      "type": "cpu",
-      "key": "├─  CPU",
-      "keyColor": "#8aadf4"
+      "type": "cursor",
+      "key": " ",
+      "keyColor": "34"
     },
     {
-      "type": "gpu",
-      "key": "├─ 󰺵 GPU",
-      "keyColor": "#8aadf4"
+      "type": "terminalfont",
+      "key": " ",
+      "keyColor": "34"
     },
     {
-      "type": "memory",
-      "key": "├─  Memory",
-      "keyColor": "#8aadf4"
+      "type": "uptime",
+      "key": " ",
+      "keyColor": "34"
     },
     {
-      "type": "disk",
-      "key": "└─ 󰋊 Disk ({mountpoint})",
-      "keyColor": "#8aadf4"
+      "type": "datetime",
+      "format": "{1}-{3}-{11}",
+      "key": " ",
+      "keyColor": "34"
     },
-    //    {
-    //      "type": "display",
-    //      "key": "├─ 󰍹 Display ({name})",
-    //      "keyColor": "#8aadf4"
-    //    },
-    //    {
-    //      "type": "battery",
-    //      "key": "└─  Battery",
-    //      "keyColor": "#8aadf4"
-    //    },
+    {
+      "type": "media",
+      "key": "󰝚 ",
+      "keyColor": "34"
+    },
+    {
+      "type": "player",
+      "key": " ",
+      "keyColor": "34"
+    },
     "break",
     {
       "type": "custom",
-      "format": "{##d20f39}○─{##df8e1d}○─{##fe640b}○─{##1e66f5}○─{##ea76cb}○─{##04a5e5}○─{##8839ef}○─{##4c4f69}○"
-    }
-    //    {
-    //      "type": "colors",
-    //      "symbol": "circle"
-    //    }
+      "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m"
+    },
+    "break",
+    "break"
   ]
 }
